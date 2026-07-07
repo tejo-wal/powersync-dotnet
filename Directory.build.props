@@ -2,6 +2,9 @@
 <Project>
     <PropertyGroup>
         <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);NETSDK1202</MSBuildWarningsAsMessages>
+        <!-- ECQTS private patch of PowerSync 0.1.2: honor CloseSyncStream.hide_disconnect (CoreInstructions.cs) -->
+        <Version>0.1.2.1</Version>
+        <PackageVersion>0.1.2.1</PackageVersion>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="$(MSBuildThisFileDirectory)IsExternalInit.cs" Visible="false" />
