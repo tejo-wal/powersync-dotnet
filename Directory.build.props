@@ -2,6 +2,11 @@
 <Project>
     <PropertyGroup>
         <MSBuildWarningsAsMessages>$(MSBuildWarningsAsMessages);NETSDK1202</MSBuildWarningsAsMessages>
+        <!-- ECQTS private patch of PowerSync 0.1.3: honor CloseSyncStream.hide_disconnect (CoreInstructions.cs).
+             0.1.3 already contains the streaming-sync retry-backoff/RetryDelayMs fix (#70); this re-applies the
+             CloseSyncStream payload deserialization that upstream still omits. -->
+        <Version>0.1.3.1</Version>
+        <PackageVersion>0.1.3.1</PackageVersion>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="$(MSBuildThisFileDirectory)IsExternalInit.cs" Visible="false" />
